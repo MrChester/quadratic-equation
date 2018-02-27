@@ -27,4 +27,5 @@ module.exports = function longMultiplication(strNum1, strNum2) {
             }
         }
     }
+    return resArr.reverse().join();
 }
