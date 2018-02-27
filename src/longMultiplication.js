@@ -20,9 +20,9 @@ module.exports = function longMultiplication(strNum1, strNum2) {
                 if (!((currentNdx + 1) >= resArrLen)) {
                     resArr[currentNdx + 1] = Math.floor(resArr[currentNdx] / 10) + resArr[currentNdx + 1];
                 } else {
-
+                    resArr[currentNdx + 1] = Math.floor(resArr[currentNdx] / 10);
                 }
-                resArr[currentNdx + 1] = Math.floor(resArr[currentNdx] / 10);
+
                 resArr[currentNdx] -= resArr[currentNdx] % 10;
             }
         }
