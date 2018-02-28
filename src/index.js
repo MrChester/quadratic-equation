@@ -5,8 +5,16 @@ const longDivision = require('./longDivision');
 const sqrtFunc = require('./sqrtFunction');
 
 module.exports = function solveEquation(equation) {
-        let resArr = [];
-        let a, b, c, x1, x2, x, discriminant;
+        var resArr = [],
+            a, b, c, x1, x2, x, discriminant,
+            regexp = /-\d+|\d+/gi,
+            regSpaces = /\s+|\b\^\w/gi,
+            tempArr = equation.replace(regSpaces, ''),
+            numArr = tempArr.math(regexp);
+
+        a = numArr[0];
+        b = numArr[1];
+        c = numArr[2];
 
         discriminant = sqrtFunc(longMultiplication(b, b) - longMultiplication(4, longMultiplication(a, c));
 
