@@ -1,7 +1,7 @@
 module.exports = function longMultiplication(strNum1, strNum2) {
-    let firstNumArr = strNum1.split("").reverse();
+    let firstNumArr = strNum1.toString().replace(/-/g, '').split("").reverse();
     let firstNumArrLen = firstNumArr.length;
-    let secondNumArr = strNum2.toString().split("").reverse();
+    let secondNumArr = strNum2.toString().replace(/-/g, '').split("").reverse();
     let secondNumArrLen = secondNumArr.length;
     let resArr = [];
 
