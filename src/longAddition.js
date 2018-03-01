@@ -1,6 +1,6 @@
 module.exports = function longAddition(strNum1, strNum2) {
-    let firstNumArr = strNum1.replace(/-/g, '').split("").reverse(),
-        secondNumArr = strNum2.replace(/-/g, '').split("").reverse(),
+    let firstNumArr = strNum1.toString().replace(/-/g, '').split("").reverse(),
+        secondNumArr = strNum2.toString().replace(/-/g, '').split("").reverse(),
         len_a = firstNumArr.length,
         len_b = secondNumArr.length,
         len = Math.max(len_a, len_b),

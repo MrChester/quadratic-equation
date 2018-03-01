@@ -1,6 +1,6 @@
 module.exports = function numComaprison(strNum1, strNum2) {
-    let firstNumArr = strNum1.replace(/-/g, '').split("").reverse(),
-        secondNumArr = strNum2.replace(/-/g, '').split("").reverse(),
+    let firstNumArr = strNum1.toString().replace(/-/g, '').split("").reverse(),
+        secondNumArr = strNum2.toString().replace(/-/g, '').split("").reverse(),
         firstNumArrLen = firstNumArr.length,
         secondNumArrLen = secondNumArr.length,
         flag = 3,

@@ -1,37 +1,29 @@
+const numComaprison = require('./numComparison');
 const longAddition = require('./longAddition');
+const sqrtFunction = require('./sqrtFunction');
 const longSubtraction = require('./longSubtraction');
 const longMultiplication = require('./longMultiplication');
 const longDivision = require('./longDivision');
-const sqrtFunc = require('./sqrtFunction');
 
 module.exports = function solveEquation(equation) {
-    var resArr = [],
-        a, b, c, x1, x2, x, discriminant,
+    var a, b, c, x1, x2,
         regexp = /-\d+|\d+/gi,
         regSpaces = /\s+|\b\^\w/gi,
         tempArr = equation.replace(regSpaces, ''),
-        numArr = tempArr.match(regexp);
+        numArr = tempArr.match(regexp),
+        resArr = [];
+
 
     a = numArr[0];
     b = numArr[1];
     c = numArr[2];
 
-    console.log(a);
-    console.log(b);
-    console.log(c);
-
-    discriminant = sqrtFunc(longMultiplication(b, b) - longMultiplication(4, longMultiplication(a, c)));
-
-    if (d > 0) {
-        x1 = (-b + discriminant) / 2 * a;
-        x2 = (-b - discriminant) / 2 * a;
-        resArr.push(x1);
-        resArr.push(x2);
-    }
-    if (d === 0) {
-        x = -b / 2 * a;
-    }
 
 
-    return resArr.sort();
+    x1 = Math.round(((-1) * b + Math.sqrt(b * b - 4 * a * c)) / (2 * a));
+    x2 = Math.round(((-1) * b - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
+    resArr.push(x1);
+    resArr.push(x2);
+
+    return resArr.sort((right, left) => { return right - left });
 }
