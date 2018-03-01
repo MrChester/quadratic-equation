@@ -1,10 +1,3 @@
-const numComaprison = require('./numComparison');
-const longAddition = require('./longAddition');
-const sqrtFunction = require('./sqrtFunction');
-const longSubtraction = require('./longSubtraction');
-const longMultiplication = require('./longMultiplication');
-const longDivision = require('./longDivision');
-
 module.exports = function solveEquation(equation) {
     var a, b, c, x1, x2,
         regexp = /-\d+|\d+/gi,
